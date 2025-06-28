@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Input Output</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #output {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            min-height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Simple Input Output</h1>
+    <p>Enter text below and it will be displayed as output.</p>
+    
+    <div class="container">
+        <textarea id="inputText" placeholder="Enter your text here..."></textarea>
+        <button onclick="displayInput()">Submit</button>
+    </div>
+    
+    <div id="output"></div>
+    
+    <script>
+        function displayInput() {
+            const input = document.getElementById("inputText").value;
+            const outputDiv = document.getElementById("output");
+            outputDiv.textContent = input;
+        }
+    </script>
+</body>
+</html>
